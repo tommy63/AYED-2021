@@ -93,5 +93,14 @@ print(invertir_cadena('salomon'))
 
 
 
+# Ejercicio 7
 
+def sumatoria_2(numero):
+    if (numero == 1):
+        return numero
+    else:
+        return 1/numero + sumatoria_2(numero-1)
+
+
+print(sumatoria_2(3))
 
