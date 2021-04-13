@@ -89,7 +89,7 @@ def invertir_cadena(cadena):
         return cadena[-1] + invertir_cadena(cadena[0:-1])
 
 
-print(invertir_cadena('salomon'))
+# print(invertir_cadena('salomon'))
 
 
 
@@ -102,5 +102,28 @@ def sumatoria_2(numero):
         return 1/numero + sumatoria_2(numero-1)
 
 
-print(sumatoria_2(3))
+# print(sumatoria_2(3))
+
+
+# Ejercicio 10
+
+def contador(numero, count):
+    if count == len(str(numero)):
+        return count
+    else:
+        return contador(numero,count+1)
+
+
+# print(contador(1234567890,0))
+
+# Ejercicio 14
+
+def sumar_numeros(numero):
+    if (numero == 0):
+        return numero
+    else:
+        return (numero % 10) + sumar_numeros(numero // 10) 
+
+
+print(sumar_numeros(345))
 
