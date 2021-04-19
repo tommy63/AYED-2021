@@ -44,40 +44,7 @@ def potencia(numero1,numero2):
         return numero1 * potencia(numero1,numero2-1)
 
 
-# Ejercicio 5
-# 4=IV
-# 1-5=4
-def romano_a_decimal(letra):
-    """Pasa una letra del sistema romano a su valor en sistema decimal"""
-    if letra == "I":
-        return 1
-    elif letra == "V":
-        return 5
-    elif letra == "X":
-        return 10
-    elif letra == "L":
-        return 50
-    elif letra == "C":
-        return 100
-    elif letra == "D":
-        return 500
-    else:
-        return 0
 
-def convercion(numero):
-    if len(numero) <= 1:
-        return romano_a_decimal(numero)
-    else:
-        num_actual = romano_a_decimal(numero[0])
-        num_siguiente = romano_a_decimal(numero[1])
-
-        if num_actual >= num_siguiente:
-            return  num_actual + convercion(numero[1:len(numero)])
-        else:
-            return convercion(numero[1:len(numero)]) - num_actual
-
-# num = input("Ingresar numero romano: ")
-# print("Resultado:", convercion(num))
 
 # Ejercicio 6
 
@@ -125,5 +92,123 @@ def sumar_numeros(numero):
         return (numero % 10) + sumar_numeros(numero // 10) 
 
 
-print(sumar_numeros(345))
+# print(sumar_numeros(345))
 
+
+
+# Ejercicio 5
+def romano_a_decimal(letra):
+    """Pasa una letra del sistema romano a su valor en sistema decimal"""
+    if letra == "I":
+        return 1
+    elif letra == "V":
+        return 5
+    elif letra == "X":
+        return 10
+    elif letra == "L":
+        return 50
+    elif letra == "C":
+        return 100
+    elif letra == "D":
+        return 500
+    else:
+        return 0
+
+def convercion(numero):
+    if len(numero) <= 1:
+        return romano_a_decimal(numero)
+    else:
+        num_actual = romano_a_decimal(numero[0])
+        num_siguiente = romano_a_decimal(numero[1])
+
+        if num_actual >= num_siguiente:
+            return  num_actual + convercion(numero[1:len(numero)])
+        else:
+            return convercion(numero[1:len(numero)]) - num_actual
+
+# num = input("Ingresar numero romano: ")
+# print("Resultado:", convercion(num))
+
+
+
+# Ejercicio 8
+
+def decimal_binario(numero):
+    if numero == 0 or numero == 1:
+        return str(numero)
+    else:
+        return decimal_binario(numero//2) + str(numero%2)
+
+#print(decimal_binario(2))
+
+
+# Ejercicio 22
+
+def usar_la_fuerza(mochila):
+    #if mochila == [] or mochila[objetos_sacados] == "Sable de luz" or len(mochila) - 1 == objetos_sacados:
+    if mochila == [] or mochila[-1] == "Sable de luz":
+        return mochila
+    else:
+        return usar_la_fuerza(mochila[0:-1])
+
+
+mochila = ["Documento", "La sube" ,"Sable de luz", "Galletitas"]
+# mochila = []
+
+num = len(usar_la_fuerza(mochila))
+
+if num <= len(mochila) and num != 0:
+    print("El sable de luz está en la mochila")
+else:
+    print("El sable de luz no está en la mochila")
+
+print("Se sacaron", num, "objetos")
+
+
+# Ejercicio 23
+
+laberinto = [
+    [1,1,1,1,0],
+    [1,0,0,1,1],
+    [1,0,1,1,0],
+    [0,0,1,1,0],
+    [0,0,0,1,1]
+]
+
+def salir_del_laberinto(laberinto, x = 0, y = 0):
+    # Pregunta si ya llego al final
+    if x == len(laberinto[0]) - 1 and y == len(laberinto) -1:
+        print(laberinto)
+        return True
+    else:
+        #pregunta si se esta analizando una posicion de la matriz valida
+        if x < 0 or y < 0 or x > len(laberinto) -1 or y > len(laberinto[0]) -1:
+            return False
+        else:
+            if laberinto[x][y] == 0 or laberinto[x][y] == 2:
+                return False
+            else:
+                laberinto[x][y] = 2
+
+                if salir_del_laberinto(laberinto, x + 1,y):
+                    print(">")
+                    return True
+                elif salir_del_laberinto(laberinto, x, y+1):
+                    print("v")
+                    return True
+                elif salir_del_laberinto(laberinto, x-1, y):
+                    print("<")
+                    return True
+                elif salir_del_laberinto(laberinto, x, y-1):
+                    print("^")
+                    return True
+
+# print(salir_del_laberinto(laberinto))
+
+[
+[2, 0, 0, 1, 0], 
+[2, 2, 2, 1, 1], 
+[0, 0, 2, 1, 0], 
+[0, 0, 2, 2, 0], 
+[0, 0, 0, 2, 1]
+]
