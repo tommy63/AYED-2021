@@ -94,7 +94,7 @@ def sumar_numeros(numero):
 
 # print(sumar_numeros(345))
 
-
+###########################################################################################
 
 # Ejercicio 5
 def romano_a_decimal(letra):
@@ -205,10 +205,10 @@ def salir_del_laberinto(laberinto, x = 0, y = 0):
 
 # print(salir_del_laberinto(laberinto))
 
-[
-[2, 0, 0, 1, 0], 
-[2, 2, 2, 1, 1], 
-[0, 0, 2, 1, 0], 
-[0, 0, 2, 2, 0], 
-[0, 0, 0, 2, 1]
-]
+################################################################################
+
+
+
+# Tomas Alaluf
+# Gabriel Ramos
+# Sebastian Maldonado
