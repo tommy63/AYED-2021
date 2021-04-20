@@ -168,16 +168,20 @@ mochila = ["Documento", "La sube" ,"Sable de luz", "Galletitas"]
 # Ejercicio 23
 
 laberinto = [
-    [1,0,0,1,0],
-    [1,1,1,1,1],
-    [1,0,0,1,0],
-    [0,0,0,1,0],
-    [1,1,1,1,1]
+    [1,0,1,0,0,0],
+    [1,1,1,1,1,0],
+    [1,0,1,0,1,0],
+    [1,0,1,1,1,1],
+    [1,1,1,0,0,1],
+    [0,0,1,0,0,1],
+    [1,1,1,1,1,1],
+    [1,1,0,0,0,1],
 ]
 
-def salir_del_laberinto(laberinto, x = 0, y = 0):
+def salir_del_laberinto(laberinto, x = 0, y = 0, camino = ""):
     # Pregunta si ya llego al final
-    if x == len(laberinto[0]) - 1 and y == len(laberinto) -1:
+    if x == len(laberinto) - 1 and y == len(laberinto[0]) -1:
+        print("Camino: ", camino + "llegada")
         return True
     else:
         #pregunta si se esta analizando una posicion de la matriz valida
@@ -189,24 +193,19 @@ def salir_del_laberinto(laberinto, x = 0, y = 0):
             else:
                 laberinto[x][y] = 0
 
-                if salir_del_laberinto(laberinto, x + 1,y):
-                    print("v")
-                    
-                elif salir_del_laberinto(laberinto, x, y+1):
-                    print(">")
-                    
-                elif salir_del_laberinto(laberinto, x-1, y):
-                    print("^")
-                    
-                elif salir_del_laberinto(laberinto, x, y-1):
-                    print("<")
+                if salir_del_laberinto(laberinto, x + 1,y, camino + "v "):
+                    return True
+                elif salir_del_laberinto(laberinto, x, y+1, camino + "> "):
+                    return True
+                elif salir_del_laberinto(laberinto, x-1, y, camino + "^ "):
+                    return True
+                elif salir_del_laberinto(laberinto, x, y-1, camino + "< "):
+                    return True
                 else:
                     return False
                     
-                return True
-                    
-
-salir_del_laberinto(laberinto)
+if not salir_del_laberinto(laberinto):
+    print("No hay forma de salir del laberinto")
 
 ################################################################################
 
