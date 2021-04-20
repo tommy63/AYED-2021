@@ -155,55 +155,58 @@ def usar_la_fuerza(mochila):
 mochila = ["Documento", "La sube" ,"Sable de luz", "Galletitas"]
 # mochila = []
 
-num = len(usar_la_fuerza(mochila))
+# num =len(mochila) - len(usar_la_fuerza(mochila))
 
-if num <= len(mochila) and num != 0:
-    print("El sable de luz está en la mochila")
-else:
-    print("El sable de luz no está en la mochila")
+# if num <= len(mochila) and num != 0:
+#     print("El sable de luz está en la mochila")
+# else:
+#     print("El sable de luz no está en la mochila")
 
-print("Se sacaron", num, "objetos")
+# print("Se sacaron", num, "objetos")
 
 
 # Ejercicio 23
 
 laberinto = [
-    [1,1,1,1,0],
-    [1,0,0,1,1],
-    [1,0,1,1,0],
-    [0,0,1,1,0],
-    [0,0,0,1,1]
+    [1,0,0,1,0],
+    [1,1,1,1,1],
+    [1,0,0,1,0],
+    [0,0,0,1,0],
+    [1,1,1,1,1]
 ]
 
 def salir_del_laberinto(laberinto, x = 0, y = 0):
     # Pregunta si ya llego al final
     if x == len(laberinto[0]) - 1 and y == len(laberinto) -1:
-        print(laberinto)
         return True
     else:
         #pregunta si se esta analizando una posicion de la matriz valida
         if x < 0 or y < 0 or x > len(laberinto) -1 or y > len(laberinto[0]) -1:
             return False
         else:
-            if laberinto[x][y] == 0 or laberinto[x][y] == 2:
+            if laberinto[x][y] == 0:
                 return False
             else:
-                laberinto[x][y] = 2
+                laberinto[x][y] = 0
 
                 if salir_del_laberinto(laberinto, x + 1,y):
-                    print(">")
-                    return True
-                elif salir_del_laberinto(laberinto, x, y+1):
                     print("v")
-                    return True
+                    
+                elif salir_del_laberinto(laberinto, x, y+1):
+                    print(">")
+                    
                 elif salir_del_laberinto(laberinto, x-1, y):
-                    print("<")
-                    return True
-                elif salir_del_laberinto(laberinto, x, y-1):
                     print("^")
-                    return True
+                    
+                elif salir_del_laberinto(laberinto, x, y-1):
+                    print("<")
+                else:
+                    return False
+                    
+                return True
+                    
 
-# print(salir_del_laberinto(laberinto))
+salir_del_laberinto(laberinto)
 
 ################################################################################
 
