@@ -19,6 +19,17 @@ class Pila(object):
     def elemento_cima(self):
         return self.__elementos[-1]
 
+    def barrido_pila(self):
+        aux = Pila()
+
+        while not self.pila_vacia():
+            num = self.desapilar()
+            print(num)
+            aux.apilar(num)
+
+        while not aux.pila_vacia():
+            self.apilar(aux.desapilar())
+
 # from random import randint
 
 # pila = Pila()
