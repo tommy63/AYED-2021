@@ -42,4 +42,29 @@ def eliminarIesimo(pila : Pila, iesimo : int):
 # print()
 # barridoPila(pilaRandom)
 
+# pilaNumeros = Pila()
+# pilaAux = Pila()
 
+# while True:
+#     numero = int(input("Ingresar un numero distinto de 0: "))
+    
+#     if numero == 0:
+#         break
+
+#     if pilaNumeros.pila_vacia():
+#         pilaNumeros.apilar(numero)
+    
+#     elif pilaNumeros.elemento_cima() <= numero:
+#         pilaNumeros.apilar(numero)
+    
+#     else:
+#         while not pilaNumeros.pila_vacia() and pilaNumeros.elemento_cima() >= numero:
+#             num = pilaNumeros.desapilar()
+#             pilaAux.apilar(num)
+
+#         pilaNumeros.apilar(numero)
+
+#         while not pilaAux.pila_vacia():
+#             pilaNumeros.apilar(pilaAux.desapilar())
+
+# pilaNumeros.barrido_pila()
