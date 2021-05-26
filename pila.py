@@ -30,13 +30,13 @@ class Pila(object):
         while not aux.pila_vacia():
             self.apilar(aux.desapilar())
 
-    def intercambiar_pila(pila : Pila):
-        aux = Pila()
+def intercambiar_pila(pila : Pila):
+    aux = Pila()
 
-        while not pila.pila_vacia():
-            aux.apilar(pila.desapilar())
+    while not pila.pila_vacia():
+        aux.apilar(pila.desapilar())
 
-        return aux
+    return aux
 
 # from random import randint
 
