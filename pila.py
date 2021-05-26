@@ -30,25 +30,10 @@ class Pila(object):
         while not aux.pila_vacia():
             self.apilar(aux.desapilar())
 
-# from random import randint
+def intercambiar_pila(pila : Pila):
+    aux = Pila()
 
-# pila = Pila()
-# pila_aux = Pila()
+    while not pila.pila_vacia():
+        aux.apilar(pila.desapilar())
 
-# for i in range(0, 10):
-#     pila.apilar(randint(0, 100))
-
-# print('cantidad de elementos', pila.tamanio())
-
-# while(not pila.pila_vacia()):
-#     x = pila.desapilar()
-#     pila_aux.apilar(x)
-#     print(x)
-
-# print()
-# while(not pila_aux.pila_vacia()):
-#     x = pila_aux.desapilar()
-#     pila.apilar(x)
-
-# print()
-# print(pila.tamanio())
+    return aux
