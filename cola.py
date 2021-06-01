@@ -25,4 +25,6 @@ class Cola(object):
     def tamanio(self):
         return len(self.__elementos)
     
-
+def barrido_cola(cola : Cola):
+    for i in range(cola.tamanio()):
+        print(cola.mover_final())
