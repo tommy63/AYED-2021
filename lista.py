@@ -1,4 +1,3 @@
-
 def __criterio(dato, criterio):
     if(criterio is None):
         return dato
@@ -55,6 +54,8 @@ class Lista(object):
         else:
             return None
 
+    def eliminar_pos(self, pos):
+        return self.__elementos.pop(pos)
 
     def modificar_elemento(self, pos, nuevo_valor, criterio=None):
         self.__elementos.pop(pos)
@@ -132,7 +133,9 @@ class Lista(object):
     
     def ordenar(self, criterio):
         quicksort(self.__elementos, 0, len(self.__elementos)-1, criterio)
-
+    
+    def __str__(self):
+        return str(self.__elementos)
 
 # from random import randint
 # lista_vocales = Lista()
