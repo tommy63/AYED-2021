@@ -120,6 +120,13 @@ class Lista(object):
             print('autos:')
             elemento['autos'].barrido()
 
+    def barrido_lista_pokemons(self):
+        for elemento in self.__elementos:
+            print(elemento)
+            print('pokemones:')
+            elemento['pokemones'].barrido()
+            print()
+
     # def barrido(self):
     #     for elemento in self.__elementos:
     #         for valor in elemento.values():
