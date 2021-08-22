@@ -127,6 +127,7 @@ class Lista(object):
             elemento['pokemones'].barrido()
             print()
 
+
     # def barrido(self):
     #     for elemento in self.__elementos:
     #         for valor in elemento.values():
