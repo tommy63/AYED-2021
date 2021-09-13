@@ -28,14 +28,17 @@ pos = ListaEntrenadores.busqueda('ash', 'nombre')
 if pos != -1:
     ListaEntrenadores.obtener_elemento(pos)['pokemones'].insertar(pokemon1, 'nombre')
     ListaEntrenadores.obtener_elemento(pos)['pokemones'].insertar(pokemon4, 'nombre')
+    
 
 pos = ListaEntrenadores.busqueda('misty', 'nombre')
 if pos != -1:
     ListaEntrenadores.obtener_elemento(pos)['pokemones'].insertar(pokemon3, 'nombre')
     ListaEntrenadores.obtener_elemento(pos)['pokemones'].insertar(pokemon6, 'nombre')
+    ListaEntrenadores.obtener_elemento(pos)['pokemones'].insertar(pokemon3, 'nombre')
 
 pos = ListaEntrenadores.busqueda('rojo', 'nombre')
 if pos != -1:
+    ListaEntrenadores.obtener_elemento(pos)['pokemones'].insertar(pokemon3, 'nombre')
     ListaEntrenadores.obtener_elemento(pos)['pokemones'].insertar(pokemon2, 'nombre')
     ListaEntrenadores.obtener_elemento(pos)['pokemones'].insertar(pokemon5, 'nombre')
     ListaEntrenadores.obtener_elemento(pos)['pokemones'].insertar(pokemon7, 'nombre')
@@ -90,6 +93,14 @@ entrenador_max['pokemones'].barrido()
 print()
 # e. mostrar los entrenadores cuyo porcentaje de batallas ganadas sea mayor al 79 %;
 
+pos_max = -1
+
+for i in range(ListaEntrenadores.tamanio()):
+    batallas = ListaEntrenadores.obtener_elemento(i)
+    porcentaje_victoria = (batallas['B-ganadas'] * 100) /(batallas['B-ganadas']+ batallas['B-perdidas'])
+    if porcentaje_victoria > 79 :
+        pos_max = i
+        print(batallas['nombre'])
 
 print()
 # f. los entrenadores que tengan Pokémons de tipo fuego y planta o agua/volador
@@ -99,4 +110,74 @@ for i in range(ListaEntrenadores.tamanio()):
     for n in range(entrena['pokemones'].tamanio()):
         if entrena['pokemones'].obtener_elemento(n)['tipo'] == 'agua' and entrena['pokemones'].obtener_elemento(n)['subtipo'] == 'volador':
             print('Tipo agua/volador: ',entrena['pokemones'].obtener_elemento(n)['nombre'])
-            
+
+
+print()
+# g. el promedio de nivel de los Pokémons de un determinado entrenador;
+
+acumulador = 0
+pos_pokemon = ListaEntrenadores.busqueda('ash','nombre')
+entrena_pokemon = ListaEntrenadores.obtener_elemento(pos_pokemon)
+for i in range(entrena_pokemon['pokemones'].tamanio()):
+    acumulador += entrena_pokemon['pokemones'].obtener_elemento(i)['nivel']
+
+promedio = acumulador / entrena_pokemon['pokemones'].tamanio()
+
+print('promedio de nivel de los pokemones: ',promedio)
+
+
+print()
+# h. determinar cuántos entrenadores tienen a un determinado Pokémon;
+
+
+for i in range(ListaEntrenadores.tamanio()):
+    tiene_pokemon = ListaEntrenadores.obtener_elemento(i)
+    for n in range(tiene_pokemon['pokemones'].tamanio()):
+        if tiene_pokemon['pokemones'].obtener_elemento(n) == pokemon3:
+            print(tiene_pokemon['nombre'],'tiene el pokemon: ',pokemon3['nombre']) 
+
+print()
+# i. mostrar los entrenadores que tienen Pokémons repetidos;
+
+
+for i in range(ListaEntrenadores.tamanio()):
+    entrena_p = ListaEntrenadores.obtener_elemento(i)
+    for n in range(entrena_p['pokemones'].tamanio()):
+        contador_repetido = 0
+        for j in range(entrena_p['pokemones'].tamanio()):
+            if entrena_p['pokemones'].obtener_elemento(n)['nombre'] == entrena_p['pokemones'].obtener_elemento(j)['nombre']:
+                contador_repetido += 1
+                if contador_repetido > 1:
+                    break
+        if contador_repetido > 1:
+            print('el entrenador: ',entrena_p['nombre'], 'tiene pokemones repetidos')
+            break 
+
+print()
+# j. determinar los entrenadores que tengan uno de los siguientes Pokémons: Tyrantrum, Terrakion o Wingull;
+
+for i in range(ListaEntrenadores.tamanio()):
+    entrena_bus = ListaEntrenadores.obtener_elemento(i)
+    for n in range(entrena_bus['pokemones'].tamanio()):
+        if entrena_bus['pokemones'].obtener_elemento(n) == pokemon6 or entrena_bus['pokemones'].obtener_elemento(n) == pokemon7:
+            print(entrena_bus['nombre'])
+        
+                        
+print()
+# k. determinar si un entrenador “X” tiene al Pokémon “Y”, tanto el nombre del entrenador
+# como del Pokémon deben ser ingresados; además si el entrenador tiene al Pokémon se
+# deberán mostrar los datos de ambos;
+
+print('ingrese el entrenador')
+entrena = input()
+if entrena == 'ash':
+    print(ListaEntrenadores.obtener_elemento(ListaEntrenadores.busqueda('ash','nombre'))['pokemones'].tamanio())
+elif entrena == 'misty':
+    print(ListaEntrenadores.obtener_elemento(ListaEntrenadores.busqueda('misty','nombre'))['pokemones'].tamanio())
+elif entrena == 'rojo':
+    print(ListaEntrenadores.obtener_elemento(ListaEntrenadores.busqueda('rojo','nombre'))['pokemones'].tamanio())
+else:
+    print('el nombre de entrenador no se encuentra')
+
+print ('ingrese el nombre del pokemon')
+pokemon = input()
