@@ -171,13 +171,33 @@ print()
 print('ingrese el entrenador')
 entrena = input()
 if entrena == 'ash':
-    print(ListaEntrenadores.obtener_elemento(ListaEntrenadores.busqueda('ash','nombre'))['pokemones'].tamanio())
-elif entrena == 'misty':
-    print(ListaEntrenadores.obtener_elemento(ListaEntrenadores.busqueda('misty','nombre'))['pokemones'].tamanio())
-elif entrena == 'rojo':
-    print(ListaEntrenadores.obtener_elemento(ListaEntrenadores.busqueda('rojo','nombre'))['pokemones'].tamanio())
-else:
-    print('el nombre de entrenador no se encuentra')
+    entre = ListaEntrenadores.obtener_elemento(ListaEntrenadores.busqueda('ash','nombre'))
+    print ('ingrese el nombre del pokemon')
+    pokemon = input()
+    for n in range(entre['pokemones'].tamanio()):
+        if entre['pokemones'].obtener_elemento(n)['nombre'] == pokemon:
+            print(entre,entre['pokemones'].obtener_elemento(n))
+        
+    
 
-print ('ingrese el nombre del pokemon')
-pokemon = input()
+elif entrena == 'misty':
+    entre = ListaEntrenadores.obtener_elemento(ListaEntrenadores.busqueda('misty','nombre'))
+    print ('ingrese el nombre del pokemon')
+    pokemon = input()
+    for n in range(entre['pokemones'].tamanio()):
+        if entre['pokemones'].obtener_elemento(n)['nombre'] == pokemon:
+            print(entre,entre['pokemones'].obtener_elemento(n))
+        
+
+elif entrena == 'rojo':
+    entre = ListaEntrenadores.obtener_elemento(ListaEntrenadores.busqueda('rojo','nombre'))
+    print ('ingrese el nombre del pokemon')
+    pokemon = input()
+    for n in range(entre['pokemones'].tamanio()):
+        if entre['pokemones'].obtener_elemento(n)['nombre'] == pokemon:
+            print(entre,entre['pokemones'].obtener_elemento(n))
+       
+            
+
+else:
+    print('el nombre del entrenador no se encuentra')
