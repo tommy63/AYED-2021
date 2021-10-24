@@ -1,4 +1,3 @@
-
 # Ejercicio 1
 def fibonacci(numero):
     if (numero == 0 or numero == 1):

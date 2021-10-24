@@ -12,7 +12,6 @@ class Personaje(object):
     def __init__(self, nombre : str, planeta : str):
         self.nombre = nombre
         self.planeta = planeta
-    
     def __str__(self) -> str:
         return "Personaje: " + self.nombre + ", Planeta: " + self.planeta
 
@@ -42,7 +41,6 @@ for i in range(colaPersonajes.tamanio()):
 
     if personaje.nombre == "Luke Skywalker":
         print("Planeta natal de Luke Skywalker: ", personaje.planeta)
-    
     if personaje.nombre == "Han Solo":
         print("Planeta natal de Han Solo: ", personaje.planeta)
 
@@ -57,7 +55,6 @@ for i in range(colaPersonajes.tamanio()):
             input("Ingresar nombre: "),
             input("Ingresar planeta: ")
         ))
-    
     colaPersonajes.mover_final()
 
 # d.eliminar el personaje ubicado después de Jar Jar Binks

@@ -1,6 +1,5 @@
-
 class Pila(object):
-    
+
     def __init__(self):
         self.__elementos = []
 
@@ -9,7 +8,7 @@ class Pila(object):
 
     def desapilar(self):
         return self.__elementos.pop()
-    
+
     def pila_vacia(self):
         return len(self.__elementos) == 0
 
@@ -35,5 +34,5 @@ def intercambiar_pila(pila : Pila):
 
         while not pila.pila_vacia():
             aux.apilar(pila.desapilar())
-  
+
         return aux

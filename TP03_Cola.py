@@ -1,6 +1,5 @@
 from cola import Cola
 
-
 # Ejercicio 11
 
 
