@@ -1,0 +1,268 @@
+[
+  {
+    "Criatura": "Ceto",
+    "Derrotado": "-",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 0,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Tifon",
+    "Derrotado": "Zeus",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 1,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Equidna",
+    "Derrotado": "Argos panoptnes",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 1,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Dino",
+    "Derrotado": "-",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 0,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Pefredo",
+    "Derrotado": "-",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 0,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Enio",
+    "Derrotado": "-",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 0,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Escila",
+    "Derrotado": "-",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 0,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Caribdis",
+    "Derrotado": "-",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 0,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Euriale",
+    "Derrotado": "-",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 0,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Esteno",
+    "Derrotado": "-",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 0,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Medusa",
+    "Derrotado": "Perseo",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 1,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Ladon",
+    "Derrotado": "Heracles",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 1,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Aguila del Caucaso",
+    "Derrotado": "-",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 0,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Quimera",
+    "Derrotado": "Belerofonte",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 1,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Hidra de Lerna",
+    "Derrotado": "Heracles",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 1,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Leon de Nemea",
+    "Derrotado": "Heracles",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 1,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Esfinge",
+    "Derrotado": "Edipo",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 1,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Dragon de la Colquida",
+    "Derrotado": "-",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 0,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Cerbero",
+    "Derrotado": "-",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 0,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Cerda de Cromion",
+    "Derrotado": "Teseo",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 1,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Ortro",
+    "Derrotado": "Heracles",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 1,
+    "Capturada": "Heracles"
+  },
+  {
+    "Criatura": "Toro de Creta",
+    "Derrotado": "Teseo",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 1,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Jabali De Calidon",
+    "Derrotado": "Atalanta",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 1,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Carcinos",
+    "Derrotado": "-",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 0,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Gerion",
+    "Derrotado": "Heracles",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 1,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Cloto",
+    "Derrotado": "-",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 0,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Laquesis",
+    "Derrotado": "-",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 0,
+    "Capturada": "Heracles"
+  },
+  {
+    "Criatura": "Atropos",
+    "Derrotado": "-",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 0,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Minotauro de Creta",
+    "Derrotado": "Teseo",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 1,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Harpias",
+    "Derrotado": "-",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 0,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Argos Panoptnes",
+    "Derrotado": "Hermes",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 1,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Aves del Estinfalo",
+    "Derrotado": "Heracles",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 5,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Talos",
+    "Derrotado": "Medea",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 1,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Sirenas",
+    "Derrotado": "-",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 0,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Piton",
+    "Derrotado": "Apolo",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 1,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Cierva de Cerinea",
+    "Derrotado": "-",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 0,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Basilisco",
+    "Derrotado": "-",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 0,
+    "Capturada": "-"
+  },
+  {
+    "Criatura": "Jabali de Erimanto",
+    "Derrotado": "-",
+    "Descripcion": "No hay descripcion",
+    "Cant_Derrotado": 0,
+    "Capturada": "-"
+  }
+]

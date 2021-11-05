@@ -4,7 +4,8 @@ from cola import Cola
 
 class Arbol(object):
 
-    def __init__(self, info=None, datos=None):
+    def __init__(self, info=None, datos=None, frecuencia = None):
+        self.frecuencia = frecuencia
         self.info = info
         self.datos = datos
         self.der = None
@@ -76,8 +77,8 @@ class Arbol(object):
                 self.der = Arbol(dato, datos)
             else:
                 self.der = self.der.insertar_nodo(dato, datos)
-        self = self.balancear()
         self.actualizar_altura()
+        #  self = self.balancear()
         return self
 
     def inorden(self):
@@ -252,11 +253,10 @@ class Arbol(object):
             if(self.izq is not None):
                 self.izq.conta_criaturas_derrotadas(dic)
             #! chequear que no sea vacio
-            if(self.datos['derrotado _por'] in dic):
-                dic[self.datos['derrotado_por']] += 1
+            if(self.datos['Derrotado'] in dic):
+                dic[self.datos['Derrotado']] += 1
             else:
-                dic[self.datos['derrotado_por']] = 1
-            print(self.info, self.datos)
+                dic[self.datos['Derrotado']] = 1
             if(self.der is not None):
                 self.der.conta_criaturas_derrotadas(dic)
 
@@ -270,4 +270,3 @@ class Arbol(object):
                 arbol_heroes.insertar_nodo(self.info, self.datos)
             else:
                 arbol_villanos.insertar_nodo(self.info, self.datos)
-
