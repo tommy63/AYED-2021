@@ -30,6 +30,15 @@ def derrotadosPorHeracles(arbol : Arbol):
         if (arbol.der is not None):
             derrotadosPorHeracles(arbol.der)
 
+def noFueronDerrotados(arbol : Arbol):
+    if (arbol.info is not None):
+        if (arbol.izq is not None):
+            derrotadosPorHeracles(arbol.izq)
+        if arbol.datos['Derrotado'] == 'Heracles':
+            print(arbol.datos['Criatura'])
+        if (arbol.der is not None):
+            derrotadosPorHeracles(arbol.der)
+
 #  Abrir archivo de craturas
 archivo = open('criaturas.json', 'r')
 contenido = archivo.read()
@@ -79,6 +88,6 @@ for criatura in criaturas:
 # print('Papito heracles mato a todo esto bichos, un craaaaa')
 # derrotadosPorHeracles(arbolCriaturas)
 
-#aasd
+#
 
 archivo.close()
