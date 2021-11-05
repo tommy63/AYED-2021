@@ -79,6 +79,6 @@ for criatura in criaturas:
 # print('Papito heracles mato a todo esto bichos, un craaaaa')
 # derrotadosPorHeracles(arbolCriaturas)
 
-    
+#aasd
 
 archivo.close()
