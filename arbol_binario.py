@@ -120,7 +120,8 @@ class Arbol(object):
         if(self.info is not None):
             if(self.izq is not None):
                 self.izq.busqueda_proximidad(clave)
-            if(self.info[0:len(clave)] == clave):
+            if(clave in self.info):
+            #if(self.info[0:len(clave)] == clave):
                 print(self.info)
             if(self.der is not None):
                 self.der.busqueda_proximidad(clave)
