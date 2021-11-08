@@ -51,3 +51,75 @@ grafoDioses.insertar_arista(1, 'Apollo', 'Persefone', data={'relacion': ['herman
 
 
 # c. dado el nombre de un dios mostrar los hijos de este;
+
+# nombre = input('Nombre del dios: ')
+
+# for i in range(grafoDioses.tamanio()):
+#     dios = grafoDioses.inicio.obtener_elemento(i)
+#     if dios['info'] == nombre:
+#         for j in range(dios['aristas'].tamanio()):
+#             arista = dios['aristas'].obtener_elemento(j)
+#             if(len(arista['data']['relacion']) == 2 and arista['data']['relacion'][1] == 'hijo'):
+#                 print(arista)
+            
+
+# d. dado el nombre de un dios mostrar su nombre, padre, madre, hermanos y sus hijos;
+
+# grafoDioses.adyacentes('Zeus')
+
+
+# e. determinar si existe relación directa entre dos vértice cualquieras, de ser así cual es la relación
+# entre ambos;
+
+# def directo(ver_origen, ver_destino):
+#     print('tiene relacion directa:')
+#     pos = grafoDioses.buscar_arista(ver_origen, ver_destino)
+#     print(pos)
+#     if(pos != 1):
+#         pos_aux = grafoDioses.buscar_vertice('Cronos')
+#         print(grafoDioses.inicio.obtener_elemento(pos_aux)['aristas'].obtener_elemento(pos))
+
+
+# directo('Cronos', 'Zeus')
+
+
+
+# f. dados dos dioses determinar el camino más corto entre estos y mostrarlo. Considere como
+# camino más corto el que tenga menor número de aristas;
+
+
+
+
+# g. realizar un barrido en profundidad y amplitud de dicho grafo;
+
+# grafoDioses.barrido_profundidad(0)
+# print()
+# grafoDioses.barrido_amplitud(0)
+
+
+# h. realizar un barrido mostrando el nombre de cada dios y el de su madre;
+
+
+
+# i. mostrar todos los ancestros de un determinado dios;
+
+# def ancestro(vertice_nombre):
+#     origen = grafoDioses.buscar_vertice(vertice_nombre)
+#     if(origen != -1):
+#         dios = grafoDioses.inicio.obtener_elemento(origen)
+#         for i in range(dios['aristas'].tamanio()):
+#             nombre_dios = dios['aristas'].obtener_elemento(i)['destino']
+#             dios_aux = dios['aristas'].obtener_elemento(i)['data']
+#             if(len(dios_aux['relacion']) > 1):
+#                 if(dios_aux['relacion'][1] == 'padre' or dios_aux['relacion'][1] == 'madre'):
+#                     print(nombre_dios, dios_aux['relacion'])
+#                     ancestro(nombre_dios)
+
+# ancestro('Zeus')
+
+
+# j. mostrar todos los nietos de Cronos;
+
+
+
+# k. mostrar todos los hijos de Tea;
