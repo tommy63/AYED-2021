@@ -144,7 +144,7 @@ class Grafo(object):
                 aristas += 1
         return resultado
 
-    def dijkstra(self, ver_origen):
+    def dijkstra(self, ver_origen, ver_destino):
         """Algoritmo de Dijkstra para hallar el camino mas corto."""
         no_visitados = HeapMin()
         camino = Pila()
@@ -181,11 +181,11 @@ class Grafo(object):
                 return elemento
 
 
-    def prim(self):
+    def prim(self, pos):
         """Algoritmo de Prim para hallar el árbol de expansión mínimo."""
         bosque = []
         aristas = HeapMin()
-        origen = self.inicio.obtener_elemento(0)
+        origen = self.inicio.obtener_elemento(pos)
         adyac = 0
         while(adyac < origen['aristas'].tamanio()):
             arista = origen['aristas'].obtener_elemento(adyac)
