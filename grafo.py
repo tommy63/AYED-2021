@@ -144,7 +144,7 @@ class Grafo(object):
                 aristas += 1
         return resultado
 
-    def dijkstra(self, ver_origen, ver_destino):
+    def dijkstra(self, ver_origen):
         """Algoritmo de Dijkstra para hallar el camino mas corto."""
         no_visitados = HeapMin()
         camino = Pila()
