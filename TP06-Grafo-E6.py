@@ -432,6 +432,28 @@ grafoDioses.insertar_arista(1, 'Eros', 'Himeros', data={'relacion': ['hermano']}
 
 # j. mostrar todos los nietos de Cronos;
 
-
+# for i in range(grafoDioses.tamanio()):
+#     dios = grafoDioses.inicio.obtener_elemento(i)
+#     if dios['info'] == 'Cronos':
+#         for j in range(dios['aristas'].tamanio()):
+#             arista = dios['aristas'].obtener_elemento(j)
+#             if(len(arista['data']['relacion']) == 2 and arista['data']['relacion'][1] == 'hijo'):
+#                 aux = arista['destino']
+#                 for k in range(grafoDioses.tamanio()):
+#                     dioses = grafoDioses.inicio.obtener_elemento(k)
+#                     if dioses['info'] == aux:
+#                         for l in range(dioses['aristas'].tamanio()):
+#                             nieto = dioses['aristas'].obtener_elemento(l)
+#                             if len(nieto['data']['relacion']) == 2:
+#                                 if nieto['data']['relacion'][0] == 'padre' or nieto['data']['relacion'][0] == 'madre':
+#                                     print(nieto['destino'])
 
 # k. mostrar todos los hijos de Tea;
+
+for i in range(grafoDioses.tamanio()):
+    dios = grafoDioses.inicio.obtener_elemento(i)
+    if dios['info'] == 'Theia':
+        for j in range(dios['aristas'].tamanio()):
+            arista = dios['aristas'].obtener_elemento(j)
+            if(len(arista['data']['relacion']) == 2 and arista['data']['relacion'][1] == 'hijo'):
+                print(arista)
